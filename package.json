@@ -39,7 +39,7 @@
     "es6"
   ],
   "dependencies": {
-    "babylon": "^6.15.0",
+    "babylon": "^7.0.0-beta.41",
     "pirates": "^3.0.2",
     "vlq": "^0.2.1"
   }
