@@ -34,7 +34,13 @@ function shouldTransform(filename) {
     options && 'excludes' in options ? regexpPattern(options.excludes) :
     options && 'exclude' in options ? regexpPattern(options.exclude) :
     nodeModulesRegexp;
-  return (!includes || includes.test(filename)) && !(excludes && excludes.test(filename));
+  if (includes && includes.test(filename)) {
+    return true;
+  }
+  if (excludes && excludes.test(filename)) {
+    return false;
+  }
+  return true;
 }
 
 // Given a null | string | RegExp | any, returns null | Regexp or throws a
