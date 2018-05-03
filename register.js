@@ -16,6 +16,7 @@ module.exports = function setOptions(newOptions) {
 
 var jsLoader = require.extensions['.js'];
 var exts = [ '.js', '.mjs', '.jsx', '.flow', '.es6' ];
+var nodeModulesRegexp = require('node-modules-regexp');
 
 var revert = pirates.addHook(function hook(code, filename) {
   try {
@@ -32,7 +33,7 @@ function shouldTransform(filename) {
   var excludes =
     options && 'excludes' in options ? regexpPattern(options.excludes) :
     options && 'exclude' in options ? regexpPattern(options.exclude) :
-    /\/node_modules\//;
+    nodeModulesRegexp;
   return (!includes || includes.test(filename)) && !(excludes && excludes.test(filename));
 }
 
