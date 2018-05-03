@@ -44,6 +44,11 @@ echo "Test: node require hook with excludes override"
 RES=$(node -e 'require("./register")({excludes: null});require("./test/node_modules/test-node-module.js")');
 if [ "$RES" != 42 ]; then echo 'Node require hook: exclude override failed'; exit 1; fi;
 
+# Test node require hook: include priority
+echo "Test: node require hook with include priority"
+RES=$(node -e 'require("./register")({includes: "test-node-module.js"});require("./test/node_modules/test-node-module.js")');
+if [ "$RES" != 42 ]; then echo 'Node require hook: include priority failed'; exit 1; fi;
+
 # Test flow-node
 echo "Test: flow-node"
 FLOW_NODE=$(./flow-node ./test/test-node-module.js);
