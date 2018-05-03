@@ -25,7 +25,7 @@ var revert = pirates.addHook(function hook(code, filename) {
     e.message = filename + ': ' + e.message;
     throw e;
   }
-}, { exts: exts, matcher: shouldTransform });
+}, { exts: exts, matcher: shouldTransform, ignoreNodeModules: false });
 
 function shouldTransform(filename) {
   var includes = options && regexpPattern(options.includes || options.include);
