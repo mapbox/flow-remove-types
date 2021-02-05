@@ -17,9 +17,9 @@
     "LICENSE",
     "PATENTS"
   ],
-  "homepage": "https://github.com/flowtype/flow-remove-types",
+  "homepage": "https://github.com/mapbox/flow-remove-types",
   "bugs": {
-    "url": "https://github.com/flowtype/flow-remove-types/issues"
+    "url": "https://github.com/mapbox/flow-remove-types/issues"
   },
   "repository": {
     "type": "git",
