@@ -84,9 +84,9 @@ var someObj = {
 }
 
 // Example from README
-import SomeClass from 'some-module'
+import SomeClassB from 'some-module'
 
-export class MyClass extends SomeClass {
+export class MyClass extends SomeClassB {
 
 
   constructor(value) {

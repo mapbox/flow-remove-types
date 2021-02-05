@@ -8,7 +8,7 @@ import {
 } from 'some-module';
 
 // Import types
-import type { SomeType } from 'some-module';
+import type { SomeTypeB } from 'some-module';
 
 // Typed function
 async function test(x: Type, y /*.*/ ? /*.*/ , z /*.*/ ? /*.*/ : /*.*/ number = 123): string {
@@ -118,10 +118,10 @@ var someObj = {
 }
 
 // Example from README
-import SomeClass from 'some-module'
+import SomeClassB from 'some-module'
 import type { SomeInterface } from 'some-module'
 
-export class MyClass<T> extends SomeClass implements SomeInterface {
+export class MyClass<T> extends SomeClassB implements SomeInterface {
 
   value: T
 

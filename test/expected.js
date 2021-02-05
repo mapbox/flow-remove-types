@@ -8,7 +8,7 @@ import {
 } from 'some-module';
 
 // Import types
-                                            
+                                             
 
 // Typed function
 async function test(x      , y /*.*/   /*.*/ , z /*.*/   /*.*/                = 123)         {
@@ -118,10 +118,10 @@ var someObj = {
 }
 
 // Example from README
-import SomeClass from 'some-module'
+import SomeClassB from 'some-module'
                                                 
 
-export class MyClass    extends SomeClass                          {
+export class MyClass    extends SomeClassB                          {
 
           
 
